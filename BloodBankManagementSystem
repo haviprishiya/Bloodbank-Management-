@@ -1,7 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-class Donor {
+class Donor 
+{
     String name;
     String bloodType;
     int age;    
@@ -17,16 +18,19 @@ class Donor {
         return "Donor{name='" + name + "', bloodType='" + bloodType + "', age=" + age + "}";
     }
 }
-class BloodBank {
+class BloodBank 
+{
     private List<Donor> donors;
     private int totalBloodStock;
     
-    BloodBank() {
+    BloodBank() 
+    {
         donors = new ArrayList<>();
         totalBloodStock = 0;
     }
 
-    public void addDonor(Donor donor) {
+    public void addDonor(Donor donor) 
+    {
         donors.add(donor);
         totalBloodStock += 1; 
     }
@@ -40,10 +44,12 @@ class BloodBank {
         }
         return false; 
     }
-    public int getTotalBloodStock() {
+    public int getTotalBloodStock() 
+    {
         return totalBloodStock;
     }
-    public List<Donor> getDonors() {
+    public List<Donor> getDonors() 
+    {
         return donors;
     }
 }
