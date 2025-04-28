@@ -1,28 +1,22 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
 class Donor {
     String name;
     String bloodType;
-    int age;
-    
+    int age;    
     Donor(String name, String bloodType, int age) {
         this.name = name;
         this.bloodType = bloodType;
         this.age = age;
     }
-    
     public String getBloodType() {
         return bloodType;
     }
-
-   
     public String toString() {
         return "Donor{name='" + name + "', bloodType='" + bloodType + "', age=" + age + "}";
     }
 }
-
 class BloodBank {
     private List<Donor> donors;
     private int totalBloodStock;
@@ -36,7 +30,6 @@ class BloodBank {
         donors.add(donor);
         totalBloodStock += 1; 
     }
-
     public boolean issueBlood(String bloodType) {
         for (Donor donor : donors) {
             if (donor.getBloodType().equals(bloodType)) {
@@ -47,16 +40,13 @@ class BloodBank {
         }
         return false; 
     }
-
     public int getTotalBloodStock() {
         return totalBloodStock;
     }
-
     public List<Donor> getDonors() {
         return donors;
     }
 }
-
 class BloodRequest {
     String patientName;
     String requiredBloodType;
@@ -76,7 +66,6 @@ public class BloodBankManagementSystem {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         BloodBank bloodBank = new BloodBank();
-
         while (true) {
             System.out.println("\nBlood Bank Management System");
             System.out.println("1. Add Donor");
